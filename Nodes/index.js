@@ -3,9 +3,8 @@ const fs = require('fs');
 
 
 const server = http.createServer((req, res) => {
- const html =fs.readFileSync('./indx.html','utf-8')
  res.writeHead(200, { 'content-type': 'text/plain' })
- res.end(html)
+ fs.createReadStream('./indx.html').pipe(res)
 })
 
 const PORT = process.env.PORT || 3000;
