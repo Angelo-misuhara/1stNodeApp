@@ -1,9 +1,9 @@
 const http = require('http')
 
-const server = https.createServer((req, res) => {
+const server = http.createServer((req, res) => {
  
  res.writeHead(200, { 'content-type': 'text/plain' })
- res.end('TETE')
+ res.end('I LOVE COED')
 })
 
 const PORT = process.env.PORT || 3000;
